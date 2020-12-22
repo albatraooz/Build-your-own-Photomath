@@ -11,28 +11,7 @@ def RPN(expression: str) -> str:
     LOWER_PRECEDENCE_OPERATORS = {'+', '-'}
     GREATER_PRECEDENCE_OPERATROS = {'*', '/'}
 
-    """
-    for character in expression:
-        if character.isspace():
-            continue
-        elif character in OPERATORS:
-            if character in LOWER_PRECEDENCE_OPERATORS:
-                output_queue.append(operator_stack.reverse())
-                operator_stack.clear()
-            if character in HIGER_PRECEDENCE_OPERATROS:
-                while operator_stack and operator_stack[-1] in HIGER_PRECEDENCE_OPERATROS:
-                    output_queue.append(operator_stack.pop())
-            operator_stack.append(character)
-        elif character is LEFT_PARENTHESES:
-            operator_stack.append(character)
-        elif character is RIGHT_PARENTHESES:
-            while operator_stack and operator_stack[-1] is not LEFT_PARENTHESES:
-                output_queue.append(operator_stack.pop())
-            if operator_stack:
-                operator_stack.pop()
-        elif character.isdigit():
-            output_queue.append(character)
-    """
+
     for character in expression:
         if character.isspace():
             continue
